@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="/dist/output.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+  <div class="bg-cream h-screen flex flex-col justify-center">
+
+    <div class="m-auto lg:w-2/5">
+
+      <div class="bg-red flex justify-between p-6 rounded-xl mx-4 lg:p-7">
+        <div>
+          <div class="text-white font-dmsans text-sm pb-2.5 lg:text-lg">My balance</div>
+          <div class="text-white font-dmsans font-bold text-2xl lg:text-3xl">$921.48</div>
+        </div>
+        <div class="flex">
+          <svg class="m-auto" width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+        </div>
+      </div>
+  
+
+      <div class="bg-white mt-3.5 flex flex-col p-6 mx-4 rounded-xl lg:p-7">
+        <div class="text-dark-brown font-dmsans font-bold text-2xl lg:text-3xl">Spending - Last 7 days</div>
+        <div class="">
+          <div class="flex justify-between h-48 lg:h-60">
+            <!-- Monday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="mon-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">mon</div>
+            </div>
+            <!-- Tuesday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="tue-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">tue</div>
+            </div>
+            <!-- Wednesday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="wed-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">wed</div>
+            </div>
+            <!-- Thursday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="thu-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">thu</div>
+            </div>
+            <!-- Friday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="fri-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">fri</div>
+            </div>
+            <!-- Saturday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="sat-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">sat</div>
+            </div>
+            <!-- Sunday -->
+            <div class="flex flex-col justify-end">
+              <div class="bar group bg-red hover:bg-pale-orange cursor-pointer w-8 rounded relative lg:w-12 2xl:w-16">
+                <div class="h-10 w-[4.5rem] bg-dark-brown hidden lg:group-hover:block absolute rounded leading-10 lg:-top-12 lg:-left-3">
+                  <p id="sun-amount" class="font-dmsans text-white font-bold text-center">$31.07</p>
+                </div>
+              </div>
+              <div class="font-dmsans text-medium-brown text-xs text-center mt-1">sun</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="border-t-2 border-cream mt-5 pt-5 lg:mt-9 lg:pt-9">
+          
+          <div class="flex justify-between">
+
+            <div>
+             <p class="font-dmsans tasext-medium-brown text-sm lg:text-lg">Total this month</p>
+             <p id="total" class="font-dmsans text-dark-brown font-bold text-3xl mt-1 lg:text-3xl">$478.33</p>
+            </div>
+
+            <div class="flex flex-col justify-end items-end">
+              <p class="font-dmsans text-dark-brown text-sm font-bold lg:text-lg">+2.4%</p>
+              <p class="font-dmsans text-medium-brown text-sm lg:text-lg">from last month</p>
+             </div>
+      
+          </div>  
+
+        </div>
+      
+
+      </div>
+
+    </div>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Phoebe Leung</a>.
+    </div>
+
+  </div>
+
+  <script src="/src/app.js"></script>
+</body>
+</html>
